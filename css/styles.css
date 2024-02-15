@@ -13,6 +13,7 @@ body {
   background-color: #ffffff;
   font-weight: 400;
   font-size: 16px;
+  letter-spacing: 0.02em;
   font-family: "Roboto", sans-serif;
 }
 
@@ -36,20 +37,20 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
-  max-width: 1158px;
-  width: 100%;
-  padding: 0 15px;
+  width: 320px;
+  padding: 0 16px;
   margin: 0 auto;
 }
 
 .section {
   margin: 0 auto;
-  padding-top: 120px;
-  padding-bottom: 120px;
-  flex-shrink: 0;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 /*! ---------Navigation------------- */
@@ -95,7 +96,6 @@ img {
   color: #2e2f42;
   font-weight: 500;
   line-height: 24px;
-  letter-spacing: 0.02em;
   text-align: left;
   padding: 24px 0;
   display: block;
@@ -136,7 +136,6 @@ img {
 .contacts-item {
   color: #434455;
   line-height: 24px;
-  letter-spacing: 0.02em;
   text-align: left;
   font-style: normal;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -169,7 +168,6 @@ img {
   font-size: 56px;
   font-weight: 700;
   line-height: 1.07;
-  letter-spacing: 0.02em;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 48px;
@@ -218,11 +216,13 @@ img {
 
 .features-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 72px;
+  align-items: center;
 }
 
 .features-item {
-  width: 264px;
+  width: 288px;
 }
 
 .features-icon-div {
@@ -242,18 +242,16 @@ img {
 
 .features-name {
   color: #2e2f42;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  text-align: left;
+  text-align: center;
+  font-size: 36px;
+  text-transform: capitalize;
+  font-weight: 700;
+  line-height: 1.11;
   margin-bottom: 8px;
 }
 
 .features-description {
-  line-height: 24px;
-  letter-spacing: 0.02em;
-  text-align: left;
+  font-weight: 500;
 }
 
 /*! Team 3 */
@@ -261,13 +259,15 @@ img {
 .team {
   background-color: #f4f4fd;
 }
+.team .container {
+  padding: 0 28px;
+}
 
 .team-title {
   color: #2e2f42;
   font-size: 36px;
   font-weight: 700;
   line-height: 1.11;
-  letter-spacing: 0.02em;
   text-align: center;
   text-transform: capitalize;
   margin-bottom: 72px;
@@ -275,7 +275,9 @@ img {
 
 .team-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px;
+  justify-content: center;
 }
 
 .team-item {
@@ -294,15 +296,13 @@ img {
   color: #2e2f42;
   font-size: 20px;
   font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.02em;
+  line-height: 1.2;
   text-align: center;
   margin-bottom: 8px;
 }
 
 .teammate-position {
-  line-height: 24px;
-  letter-spacing: 0.02em;
+  line-height: 1.5;
   text-align: center;
   margin-bottom: 8px;
 }
@@ -350,7 +350,6 @@ img {
   font-size: 36px;
   font-weight: 700;
   line-height: 1.11;
-  letter-spacing: 0.02em;
   text-align: center;
   text-transform: capitalize;
   margin-bottom: 72px;
@@ -359,11 +358,12 @@ img {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 48px;
-  column-gap: 24px;
+  gap: 48px;
+  justify-content: center;
 }
 
 .portfolio-item {
+  width: 288px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -381,7 +381,6 @@ img {
 
 .cover-text {
   color: #f4f4fd;
-  letter-spacing: 0.02em;
   width: 100%;
   height: 100%;
   padding: 40px 32px;
@@ -408,15 +407,13 @@ img {
   color: #2e2f42;
   font-size: 20px;
   font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.02em;
+  line-height: 1.2;
   text-align: left;
   margin-bottom: 8px;
 }
 
 .project-type {
-  line-height: 24px;
-  letter-spacing: 0.02em;
+  line-height: 1.5;
   text-align: left;
 }
 
@@ -428,35 +425,37 @@ img {
   padding-bottom: 100px;
 }
 
+/*!Это типа для мобильного экрана, 
+остальное все оригинальный CSS 
 .footer .container {
   display: flex;
-  align-items: baseline;
-}
+  flex-direction: column;
+  justify-content: center;
+}*/
 
-.logo-info {
+/* .logo-info {
   margin-right: 120px;
-}
+} */
 
-.footer-info {
+/* .footer-info {
   color: #f4f4fd;
   line-height: 24px;
-  letter-spacing: 0.02em;
   text-align: left;
   width: 264px;
-}
+} */
 
-.footer .logo {
+/* .footer .logo {
   display: inline-block;
   margin-bottom: 16px;
-}
+} */
 
 .footer .logo-right {
   color: #f4f4fd;
 }
 
-.social-container {
+/* .social-container {
   display: block;
-}
+} */
 
 .text {
   color: #ffffff;
@@ -464,7 +463,6 @@ img {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  letter-spacing: 0.02em;
   max-width: 264px;
   font-weight: 500;
   margin-bottom: 16px;
@@ -498,52 +496,45 @@ img {
   align-items: center;
 }
 
-.subscribe-container {
+/* .subscribe-container {
   margin-left: 80px;
-}
+} */
 
-.subscribe-form {
+/* .subscribe-form {
   display: flex;
   gap: 24px;
-}
+} */
 
-.subscribe-form::placeholder{
+.subscribe-form::placeholder {
   align-items: center;
-  color:  #FFF;
-  font-family: Roboto;
+  color: #fff;
   font-size: 12px;
-  font-weight: 400;
-  line-height: 24px; 
-  letter-spacing: 0.48px;
+  line-height: 20;
+  letter-spacing: 0.04;
 }
-
-.subscribe-label {
-
-}
-
 
 .subscribe-input {
   width: 264px;
   height: 40px;
-  background-color:transparent;
+  background-color: transparent;
   border-radius: 4px;
-  border: 1px solid  #FFF;
+  border: 1px solid #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   font-size: 12px;
-  line-height: 2; 
+  line-height: 2;
   letter-spacing: 0.04em;
-  color:  #ffffff; 
+  color: #ffffff;
   padding-left: 16px;
 }
 
 .subscribe-input::placeholder {
-    align-items: center;
-    color:  #FFF;
-    font-family: Roboto;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 24px; 
-    letter-spacing: 0.48px;
+  align-items: center;
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.48px;
 }
 
 .subscribe-button {
@@ -552,9 +543,10 @@ img {
   justify-content: center;
   align-items: center;
   border-radius: 4px;
-  background:  #4D5AE5;
-  color:  #FFF;
-  font-size: 16px;font-weight: 500;
+  background: #4d5ae5;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
@@ -567,7 +559,7 @@ img {
 
 .subscribe-button:focus,
 .subscribe-button:hover {
-  background-color:#404BBF;
+  background-color: #404bbf;
 }
 
 .subscribe-icon {
@@ -661,7 +653,7 @@ img {
   color: #8e8f99;
   font-size: 12px;
   line-height: 1.17;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.04;
 }
 
 .form {
@@ -733,59 +725,49 @@ img {
   margin-bottom: 24px;
 }
 
-
-.hidden-checkbox:checked+
-.checkbox-label .custom-checkbox {
-  background-color: #404BBF;
+.hidden-checkbox:checked + .checkbox-label .custom-checkbox {
+  background-color: #404bbf;
   border: none;
-  fill: #F4F4FD;
+  fill: #f4f4fd;
 }
 
 .visually-hidden {
 }
 
-/*.custom-checkbox {
-  position: relative;
-}
-
-.checkmark {
-}*/
-
-
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
-
 
 .custom-checkbox {
   width: 16px;
   height: 16px;
-  border: 1px solid rgba(46, 47, 66, 0.4); 
-  border-radius: 2px; 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-flex; 
-  align-items: center; 
-  justify-content: center; 
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   fill: transparent;
 }
 
 .form-link {
-
-  color: #4D5AE5;
-  font-family: Roboto,sans-serif;
+  color: #4d5ae5;
+  font-family: Roboto, sans-serif;
   font-size: 12px;
   font-weight: 400;
-  line-height: 16px;
-  letter-spacing: 0.48px;
+  line-height: 1.33;
+  letter-spacing: 0.04;
   text-decoration-line: underline;
 }
 
@@ -796,7 +778,7 @@ img {
   text-align: center;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.64px;
+  letter-spacing: 0.04;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   padding: 16px 32px;
@@ -811,5 +793,117 @@ img {
 
 .modal-send-button:focus,
 .modal-send-button:hover {
-  background-color:#404BBF; 
+  background-color: #404bbf;
+}
+
+/*! ================================================= MOBILE 👇 ========================================= */
+@media screen and (max-width: 767px) {
+}
+
+/*! ================================================= TABLET 👇 ========================================= */
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+
+  .features-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+    justify-content: center;
+  }
+
+  .features-item {
+    width: 356px;
+  }
+
+  .features-name {
+    text-align: left;
+  }
+
+  .team-list {
+    gap: 64px 24px;
+  }
+
+  .portfolio-list {
+    gap: 72px 24px;
+  }
+}
+
+/* ================================================= NOT DESKTOP 👇 ========================================= */
+@media screen and (max-width: 1157px) {
+  .features-icon-div {
+    display: none;
+  }
+}
+
+/*! ================================================= DESKTOP 👇 ========================================= */
+@media screen and (min-width: 1158px) {
+  .container {
+    width: 1158px;
+    padding: 0 15px;
+  }
+
+  .section {
+    margin: 0 auto;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .features-list {
+    flex-direction: row;
+    gap: 24px;
+  }
+  .features-item {
+    width: 264px;
+  }
+  .features-name {
+    line-height: 1.2;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .features-description {
+    font-weight: 400;
+    text-align: left;
+  }
+
+  .team-list {
+    gap: 24px;
+    flex-wrap: nowrap;
+  }
+
+  .portfolio-list {
+    gap: 48px 24px;
+  }
+  .portfolio-item {
+    width: 360px;
+  }
+
+  .footer .container {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .logo-info {
+    margin-right: 120px;
+  }
+  .footer-info {
+    color: #f4f4fd;
+    line-height: 24px;
+    text-align: left;
+    width: 264px;
+  }
+  .footer .logo {
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+  .social-container {
+    display: block;
+  }
+  .subscribe-container {
+    margin-left: 80px;
+  }
+  .subscribe-form {
+    display: flex;
+    gap: 24px;
+  }
 }
