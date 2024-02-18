@@ -45,7 +45,7 @@
           </li>
         </ul>
       </address>
-      <button class="open-menu" type="button">
+      <button data-menu-open class="menu-is-open" type="button">
         <svg width="24" height="24">
           <use href="./images/icons.svg#icon-open-menu"></use>
         </svg>
@@ -574,13 +574,18 @@
           <input class="hidden-checkbox visually-hidden" type="checkbox" name="user-privacy" id="user-privacy"
             value="true" />
           <label class="checkbox-label" for="user-privacy">
-            <span class="custom-checkbox">
-              <svg class="checkmark" width="10" height="8">
-                <use href="./images/icons.svg#icon-check-mark"></use>
-              </svg>
+            <div class="checkbox-div">
+              <span class="custom-checkbox">
+                <svg class="checkmark" width="10" height="8">
+                  <use href="./images/icons.svg#icon-check-mark"></use>
+                </svg>
+              </span>
+            </div>
+            <span class="checkbox-span">
+              I accept the terms and conditions of the
+              <a class="form-link" href="">Privacy Policy</a>
             </span>
-            I accept the terms and conditions of the
-            <a class="form-link" href="">Privacy Policy</a>
+
           </label>
         </div>
         <button class="modal-send-button" type="submit">
@@ -590,6 +595,78 @@
     </div>
   </div>
   <script src="./js/modal.js"></script>
+
+  <!--! Backdrop-menu -->
+
+  <div data-menu class="menu-backdrop">
+    <div class="menu">
+      <button class="modal-close-button" type="button" data-menu-close>
+        <svg class="modal-close-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-close-black"></use>
+        </svg>
+      </button>
+      <div class="menu-container">
+        <nav class="navigation">
+          <ul class="navigation-list">
+            <li>
+              <a class="navigation-item current-page" href="./index.html" target="_blank">Studio</a>
+            </li>
+            <li>
+              <a class="navigation-item" href="" target="_blank">Portfolio</a>
+            </li>
+            <li>
+              <a class="navigation-item" href="" target="_blank">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <address class="contacts">
+          <ul class="contacts-list">
+            <li>
+              <a class="contacts-item" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+            <li>
+              <a class="contacts-item" href="tel:+110001111111">+11 (000) 111-11-11</a>
+            </li>
+          </ul>
+        </address>
+        <div>
+          <ul class="icon-list">
+            <li class="icon-item">
+              <a class="link" href="">
+                <svg class="icon-svg" width="16" height="16">
+                  <use href="./images/icons.svg#icon-instagram-2"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icon-item">
+              <a class="link" href="">
+                <svg class="icon-svg" width="16" height="16">
+                  <use href="./images/icons.svg#icon-twitter-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icon-item">
+              <a class="link" href="">
+                <svg class="icon-svg" width="16" height="16">
+                  <use href="./images/icons.svg#icon-facebook-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icon-item">
+              <a class="link" href="">
+                <svg class="icon-svg" width="16" height="16">
+                  <use href="./images/icons.svg#icon-linkedin-1"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <script src="./js/menu.js" defer="defer"></script>
 </body>
 
 </html>

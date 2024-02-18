@@ -4,7 +4,6 @@
 }
 
 .section {
-  margin: 0 auto;
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -25,6 +24,11 @@
 .contacts-item {
   font-size: 16px;
   line-height: 1.5;
+}
+
+.contacts-item:hover,
+.contacts-item:focus {
+  color: #404bbf;
 }
 
 .banner-section {
