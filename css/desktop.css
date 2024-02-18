@@ -26,11 +26,6 @@
   line-height: 1.5;
 }
 
-.contacts-item:hover,
-.contacts-item:focus {
-  color: #404bbf;
-}
-
 .banner-section {
   padding: 188px 0;
   background-image: linear-gradient(
