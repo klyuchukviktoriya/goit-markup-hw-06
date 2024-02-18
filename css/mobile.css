@@ -19,7 +19,8 @@ body {
 
 h1,
 h2,
-h3 p {
+h3,
+p {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -42,7 +43,7 @@ img {
 }
 
 .container {
-  width: 320px;
+  max-width: 320px;
   padding: 0 16px;
   margin: 0 auto;
 }
@@ -58,12 +59,14 @@ img {
 .header {
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
   align-items: center;
   display: flex;
+  justify-content: space-between;
 }
 
 .navigation {
@@ -80,7 +83,7 @@ img {
   letter-spacing: 0.03em;
   text-align: left;
   text-transform: uppercase;
-  margin-right: 76px;
+  padding: 17px 0;
 }
 
 .logo-right {
@@ -88,8 +91,7 @@ img {
 }
 
 .navigation-list {
-  display: flex;
-  gap: 40px;
+  display: none;
 }
 
 .navigation-item {
@@ -124,34 +126,23 @@ img {
   content: "";
 }
 
-.contacts {
-  margin-left: auto;
-}
-
 .contacts-list {
-  display: flex;
-  gap: 40px;
+  display: none;
 }
 
-.contacts-item {
-  color: #434455;
-  line-height: 24px;
-  text-align: left;
-  font-style: normal;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contacts-item:hover,
-.contacts-item:focus {
-  color: #404bbf;
+.open-menu {
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  line-height: 0;
+  border: none;
 }
 
 /*! ---------Banner 1-------------- */
 
 .banner-section {
   max-width: 1440px;
-  padding-top: 188px;
-  padding-bottom: 188px;
+  padding: 72px 0;
   background-color: #2e2f42;
   background-size: cover;
   background-repeat: no-repeat;
@@ -160,18 +151,30 @@ img {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/peopleoffice.jpg);
+    url(../images/peopleoffice-mob-x1.jpg);
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .banner-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/peopleoffice-mob-x2.jpg);
+  }
 }
 
 .banner-title {
   color: #ffffff;
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.07;
+  line-height: 1.11;
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 48px;
-  max-width: 496px;
+  margin-bottom: 72px;
+  max-width: 216px;
 }
 
 .banner-button {
@@ -421,41 +424,41 @@ img {
 
 .footer {
   background-color: #2e2f42;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 98px;
+  padding-bottom: 96px;
 }
 
-/*!Это типа для мобильного экрана, 
-остальное все оригинальный CSS 
 .footer .container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-}*/
+  flex-wrap: wrap;
+  gap: 72px;
+}
 
-/* .logo-info {
-  margin-right: 120px;
-} */
+.logo-info {
+  text-align: center;
+}
 
-/* .footer-info {
+.footer-info {
   color: #f4f4fd;
   line-height: 24px;
   text-align: left;
-  width: 264px;
-} */
+  width: 288px;
+}
 
-/* .footer .logo {
+.footer .logo {
   display: inline-block;
-  margin-bottom: 16px;
-} */
+}
 
 .footer .logo-right {
   color: #f4f4fd;
 }
 
-/* .social-container {
-  display: block;
-} */
+.social-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
 
 .text {
   color: #ffffff;
@@ -465,14 +468,12 @@ img {
   line-height: 1.5;
   max-width: 264px;
   font-weight: 500;
-  margin-bottom: 16px;
 }
 
 .footer .icon-list {
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  justify-content: center;
 }
 
 .footer .link {
@@ -484,7 +485,7 @@ img {
   height: 100%;
   border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /*margin-bottom: 16px;*/
+  margin-bottom: 16px;
 }
 
 .footer .link:focus,
@@ -496,21 +497,18 @@ img {
   align-items: center;
 }
 
-/* .subscribe-container {
-  margin-left: 80px;
-} */
-
-/* .subscribe-form {
+.subscribe-container {
   display: flex;
-  gap: 24px;
-} */
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
 
-.subscribe-form::placeholder {
-  align-items: center;
-  color: #fff;
-  font-size: 12px;
-  line-height: 20;
-  letter-spacing: 0.04;
+.subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
 }
 
 .subscribe-input {
@@ -533,15 +531,13 @@ img {
   font-family: "Roboto";
   font-size: 12px;
   font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.48px;
+  line-height: 2;
+  letter-spacing: 0.04;
 }
 
 .subscribe-button {
   display: inline-flex;
   padding: 8px 24px;
-  justify-content: center;
-  align-items: center;
   border-radius: 4px;
   background: #4d5ae5;
   color: #fff;
@@ -553,7 +549,7 @@ img {
   border: none;
   cursor: pointer;
   height: 40px;
-  min-width: 165px;
+  width: 165px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -591,8 +587,8 @@ img {
 }
 
 .modal {
-  width: 408px;
-  min-height: 584px;
+  width: 288px;
+  min-height: 623px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -600,9 +596,10 @@ img {
   border-radius: 4px;
   background-color: #fcfcfc;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
-    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12),
+    0px 2px 1px 0px rgba(0, 0, 0, 0.2);
 }
 
 .modal-close-button {
@@ -658,7 +655,7 @@ img {
 
 .form {
   display: flex;
-  width: 360px;
+  width: 256px;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
@@ -667,7 +664,7 @@ img {
 .label {
   display: flex;
   flex-direction: column;
-  width: 360px;
+  width: 256px;
   margin-bottom: 8px;
 }
 
@@ -683,7 +680,7 @@ img {
 .input {
   width: 100%;
   height: 40px;
-  padding-left: 38px;
+  padding-left: 34px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   background-color: transparent;
@@ -712,7 +709,8 @@ img {
   margin-bottom: 16px;
 }
 
-.input-text {
+.label-text-area .input-text {
+  padding-left: 16px;
   resize: none;
   height: 120px;
   padding: 8px 16px;
@@ -725,14 +723,18 @@ img {
   margin-bottom: 24px;
 }
 
+.custom-checkbox {
+  margin-right: 8px;
+}
+
 .hidden-checkbox:checked + .checkbox-label .custom-checkbox {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
 }
 
-.visually-hidden {
-}
+/* .visually-hidden {
+  } */
 
 .visually-hidden {
   position: absolute;
@@ -796,114 +798,9 @@ img {
   background-color: #404bbf;
 }
 
-/*! ================================================= MOBILE 👇 ========================================= */
-@media screen and (max-width: 767px) {
-}
-
-/*! ================================================= TABLET 👇 ========================================= */
-@media screen and (min-width: 768px) {
-  .container {
-    width: 768px;
-  }
-
-  .features-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 72px 24px;
-    justify-content: center;
-  }
-
-  .features-item {
-    width: 356px;
-  }
-
-  .features-name {
-    text-align: left;
-  }
-
-  .team-list {
-    gap: 64px 24px;
-  }
-
-  .portfolio-list {
-    gap: 72px 24px;
-  }
-}
-
 /* ================================================= NOT DESKTOP 👇 ========================================= */
 @media screen and (max-width: 1157px) {
   .features-icon-div {
     display: none;
-  }
-}
-
-/*! ================================================= DESKTOP 👇 ========================================= */
-@media screen and (min-width: 1158px) {
-  .container {
-    width: 1158px;
-    padding: 0 15px;
-  }
-
-  .section {
-    margin: 0 auto;
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-  .features-list {
-    flex-direction: row;
-    gap: 24px;
-  }
-  .features-item {
-    width: 264px;
-  }
-  .features-name {
-    line-height: 1.2;
-    font-weight: 500;
-    font-size: 20px;
-  }
-  .features-description {
-    font-weight: 400;
-    text-align: left;
-  }
-
-  .team-list {
-    gap: 24px;
-    flex-wrap: nowrap;
-  }
-
-  .portfolio-list {
-    gap: 48px 24px;
-  }
-  .portfolio-item {
-    width: 360px;
-  }
-
-  .footer .container {
-    display: flex;
-    align-items: baseline;
-  }
-
-  .logo-info {
-    margin-right: 120px;
-  }
-  .footer-info {
-    color: #f4f4fd;
-    line-height: 24px;
-    text-align: left;
-    width: 264px;
-  }
-  .footer .logo {
-    display: inline-block;
-    margin-bottom: 16px;
-  }
-  .social-container {
-    display: block;
-  }
-  .subscribe-container {
-    margin-left: 80px;
-  }
-  .subscribe-form {
-    display: flex;
-    gap: 24px;
   }
 }

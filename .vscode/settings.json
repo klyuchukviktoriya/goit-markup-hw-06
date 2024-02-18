@@ -1,0 +1,6 @@
+{
+    "editor.autoClosingBrackets": "always",
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+    "ecsstractor_port.brackets_newline_after": false,
+    "prettier.bracketSameLine": true
+}
