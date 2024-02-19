@@ -53,6 +53,7 @@
 }
 
 .banner-section {
+  max-width: 768px;
   padding: 112px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -132,12 +133,12 @@
 }
 
 .footer .container {
+  max-width: 530px;
   gap: 72px 24px;
 }
 
 .logo-info {
   text-align: left;
-  margin-left: 108px;
 }
 
 .footer-info {
@@ -158,7 +159,6 @@
 
 .subscribe-container {
   display: block;
-  margin-left: 108px;
 }
 
 .subscribe-form {

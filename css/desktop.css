@@ -27,6 +27,7 @@
 }
 
 .banner-section {
+  max-width: 1158px;
   padding: 188px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -89,11 +90,11 @@
   flex-wrap: nowrap;
   align-items: baseline;
   gap: 0;
+  max-width: 1158px;
 }
 
 .logo-info {
   margin-right: 120px;
-  margin-left: 0;
 }
 
 .footer {
