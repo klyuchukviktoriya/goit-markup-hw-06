@@ -138,23 +138,15 @@ img {
   pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding-top: 72px;
-  padding-left: 16px;
+  padding: 72px 0 24px 16px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 
 .menu-is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-}
-
-.menu {
-  width: 320px;
-  min-height: 640px;
-  display: flex;
-  flex-direction: column;
 }
 
 .menu-navigation {
@@ -167,32 +159,35 @@ img {
   gap: 40px;
 }
 
-.menu .navigation-item {
+.menu-navigation-item {
   padding: 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 36px;
   font-weight: 700;
   line-height: 1.11;
+  color: #2e2f42;
+  font-weight: 500;
+  text-align: left;
+  padding: 24px 0;
 }
 
 .menu-contacts {
   margin-bottom: 48px;
 }
 
-.menu .contacts-list {
+.menu-contacts-list {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.menu .contacts-item {
+.menu-contacts-item {
   font-size: 20px;
   font-weight: 500;
-}
-
-.menu .contacts-item:hover,
-.menu .contacts-item:focus {
-  color: #404bbf;
+  color: #434455;
+  line-height: 1.2;
+  text-align: left;
+  font-style: normal;
 }
 
 .current-page {
@@ -200,27 +195,17 @@ img {
   color: #404bbf;
 }
 
-.menu .icon-list {
+.backdrop-menu .icon-list {
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
   gap: 40px;
 }
 
-.menu .icon-item {
+.backdrop-menu .icon-item {
   width: 40px;
   height: 40px;
 }
 
-.menu .team-item:hover .link {
-  background-color: #404bbf;
-}
-
-.menu .link:focus {
-  background-color: #404bbf;
-}
-
-.menu .link {
+.backdrop-menu .link {
   background-color: #4d5ae5;
   display: flex;
   justify-content: center;
