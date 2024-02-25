@@ -161,6 +161,10 @@
   display: block;
 }
 
+.subscribe-input {
+  width: 264px;
+}
+
 .subscribe-form {
   flex-wrap: nowrap;
   gap: 24px;
